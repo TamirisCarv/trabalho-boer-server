@@ -1,5 +1,5 @@
 # Stage 1: Build Stage
-FROM gradle:7.3.3-jdk17 AS build
+FROM gradle:7.5.1-jdk17-alpine AS build
 WORKDIR /app
 COPY . .
 RUN gradle clean build -x test
