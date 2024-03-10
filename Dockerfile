@@ -1,5 +1,5 @@
 # Stage 1: Build Stage
-FROM gradlew:7.3.3-jdk17 AS build
+FROM gradle:7.3.3-jdk17 AS build
 WORKDIR /app
 COPY . .
 RUN gradlew clean build -x test
