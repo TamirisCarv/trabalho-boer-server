@@ -2,7 +2,7 @@
 FROM gradle:7.3.3-jdk17 AS build
 WORKDIR /app
 COPY . .
-RUN gradlew clean build -x test
+RUN gradle clean build -x test
 
 # Stage 2: Package Stage
 FROM openjdk:17-jdk-slim
